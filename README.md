@@ -21,7 +21,8 @@ git clone https://github.com/SilvesterYu/YOLO_Silvey_Task.git
 ```
 chmod -R 777 *.*
 cd YOLO_Silvey_Task
-
+chmod 0755 setup.sh
+./setup.sh
 ```
 
-5. 
+## Testing
