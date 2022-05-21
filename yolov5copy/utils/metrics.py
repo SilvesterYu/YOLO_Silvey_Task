@@ -254,11 +254,12 @@ def bbox_iou(box1, box2, xywh=True, GIoU=False, DIoU=False, CIoU=False, eps=1e-7
         (b1_x, b1_y, w1, h1), (b2_x, b2_y, w2, h2) = box1.chunk(4, 1), box2.chunk(4, 1)
         # half axes for ellipse
         b1_halfw, b1_halfh, b2_halfw, b2_halfh = w1 / 2, h1 / 2, w2 / 2, h2 / 2
-
+        '''
         (x1, y1, w1, h1), (x2, y2, w2, h2) = box1.chunk(4, 1), box2.chunk(4, 1)
         w1_, h1_, w2_, h2_ = w1 / 2, h1 / 2, w2 / 2, h2 / 2
         b1_x1, b1_x2, b1_y1, b1_y2 = x1 - w1_, x1 + w1_, y1 - h1_, y1 + h1_
         b2_x1, b2_x2, b2_y1, b2_y2 = x2 - w2_, x2 + w2_, y2 - h2_, y2 + h2_
+        '''
     else: # transform top-left and bottom-right coordinates into xy w/2 h/2 (half axes)
         b1_x1, b1_y1, b1_x2, b1_y2 = box1.chunk(4, 1)
         b2_x1, b2_y1, b2_x2, b2_y2 = box2.chunk(4, 1)
@@ -270,8 +271,8 @@ def bbox_iou(box1, box2, xywh=True, GIoU=False, DIoU=False, CIoU=False, eps=1e-7
         b2_halfw, b2_halfh = (b2_x2 - b2_x1) / 2, (b2_y2 - b2_y1) / 2
 
     # Intersection area
-    inter = (torch.min(b1_x2, b2_x2) - torch.max(b1_x1, b2_x1)).clamp(0) * \
-            (torch.min(b1_y2, b2_y2) - torch.max(b1_y1, b2_y1)).clamp(0)
+    #inter = (torch.min(b1_x2, b2_x2) - torch.max(b1_x1, b2_x1)).clamp(0) * \
+    #        (torch.min(b1_y2, b2_y2) - torch.max(b1_y1, b2_y1)).clamp(0)
 
     # -- for ellipse IoU loss -- #
     print("+++++++++ checking tensor b1_x2 +++++++++")
@@ -297,9 +298,11 @@ def bbox_iou(box1, box2, xywh=True, GIoU=False, DIoU=False, CIoU=False, eps=1e-7
         ellipse_test2 = create_ellipse((e_b2_x,e_b2_y),(e_b2_halfw,e_b2_halfh),0)
         intersect_test = ellipse_test1.intersection(ellipse_test2)
         loss_list.append([intersect_test.area])
-    print(len(loss_list))
-    print(len(b1_x))
-    print(loss_list[:100])
+    #print(len(loss_list))
+    #print(len(b1_x))
+    #print(loss_list[:100])
+
+    inter = torch.tensor(loss_list, requires_grad = True)
 
     # -- end of ellipse IoU loss -- #
         
