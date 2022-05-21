@@ -25,11 +25,30 @@ chmod 0755 setup.sh
 ./setup.sh
 ```
 
-**⚠️ IMPORTANT: Make sure that you have torch==1.10.1 torchvision==0.11.2 torchaudio==0.10.1 exactly**
+**⚠️ IMPORTANT: Make sure that you have torch==1.10.1 torchvision==0.11.2 torchaudio==0.10.1 exactly. You can check with**
+```
+pip3 list
+```
 
 ## Testing
 
-### 1. Test Detection
+## 1. Test Train
+
+Test train with
+
+```
+python train.py --data coco128.yaml --cfg yolov5s.yaml --weights '' --batch-size 128 --epochs 1
+```
+
+## 2. Test Val
+
+Test val with
+
+```
+python val.py --data coco128.yaml --weights yolov5s.pt --img 640 
+```
+
+### 3. Test Detection
 To test the detection, go into ``yolov5copy`` directory
 ```
 cd yolov5copy
