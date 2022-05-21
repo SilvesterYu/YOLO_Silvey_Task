@@ -41,6 +41,11 @@ pip3 list
 
 **1. Test Train**
 
+To test the train, go into ``yolov5copy`` directory
+```
+cd yolov5copy
+```
+
 Test train with
 
 ```
@@ -48,6 +53,11 @@ python train.py --data coco128.yaml --cfg yolov5s.yaml --weights '' --batch-size
 ```
 
 **2. Test Val**
+
+To test the val, go into ``yolov5copy`` directory
+```
+cd yolov5copy
+```
 
 Test val with
 
