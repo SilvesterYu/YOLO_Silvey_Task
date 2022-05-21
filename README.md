@@ -1,6 +1,12 @@
-# YOLO_Silvey_Task
- Changing the bounding boxes from square to ellipse
+# YOLO Task
 
+![Image of Version](https://img.shields.io/badge/version-v1.0-green)
+![Image of Dependencies](https://img.shields.io/badge/dependencies-up%20to%20date-brightgreen)
+
+[![forthebadge](https://forthebadge.com/images/badges/made-with-python.svg)](https://forthebadge.com)
+!\[my badge\](https://badgen.net/badge/uses/YOLOv5/red?icon=github)
+
+Task for changing the bounding boxes from square to ellipse (in train, val and detect) by Silvey Yu
 
 ### How to run
 
