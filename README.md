@@ -2,7 +2,7 @@
  Changing the bounding boxes from square to ellipse
 
 
-## How to run
+### How to run
 
 1. Setup the virtual envrionment on your computer
 
@@ -26,3 +26,19 @@ chmod 0755 setup.sh
 ```
 
 ## Testing
+
+### 1. Test Detection
+To test the detection, go into ``yolov5copy`` directory
+```
+cd yolov5copy
+```
+
+Then, get an image from internet
+```
+wget "https://a-z-animals.com/media/2021/12/Best-farm-animals-cow.jpg"
+```
+
+Run detection using
+```
+python3 detect.py --weights yolov5s.pt --img 640 --conf 0.25 --source 'Best-farm-animals-cow.jpg' --save-txt
+```
