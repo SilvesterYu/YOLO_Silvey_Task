@@ -25,7 +25,7 @@ chmod 0755 setup.sh
 ./setup.sh
 ```
 
-** ⚠️ IMPORTANT: Make sure that you have torch==1.10.1 torchvision==0.11.2 torchaudio==0.10.1 exactly**
+**⚠️ IMPORTANT: Make sure that you have torch==1.10.1 torchvision==0.11.2 torchaudio==0.10.1 exactly**
 
 ## Testing
 
