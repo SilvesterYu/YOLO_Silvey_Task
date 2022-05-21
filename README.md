@@ -32,7 +32,7 @@ pip3 list
 
 ## Testing
 
-## 1. Test Train
+**1. Test Train**
 
 Test train with
 
@@ -40,7 +40,7 @@ Test train with
 python train.py --data coco128.yaml --cfg yolov5s.yaml --weights '' --batch-size 128 --epochs 1
 ```
 
-## 2. Test Val
+**2. Test Val**
 
 Test val with
 
@@ -48,7 +48,8 @@ Test val with
 python val.py --data coco128.yaml --weights yolov5s.pt --img 640 
 ```
 
-### 3. Test Detection
+**3. Test Detection**
+
 To test the detection, go into ``yolov5copy`` directory
 ```
 cd yolov5copy
