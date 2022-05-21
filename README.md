@@ -9,6 +9,8 @@
 
 Task for changing the bounding boxes from square to ellipse (in train, val and detect) by Silvey Yu
 
+**Demo:** [On YouTube](https://www.youtube.com/watch?v=unRMQn6KwF0&ab_channel=SilveyYu) 
+
 ### How to run
 
 1. Setup the virtual envrionment on your computer
