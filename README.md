@@ -7,7 +7,7 @@
 
 ![my badge](https://badgen.net/badge/uses/YOLOv5/red?icon=github)
 
-Task for changing the bounding boxes from rectangles to ellipses (in train, val and detect) by Silvey Yu
+Task for changing the bounding / anchor boxes from rectangles to ellipses (in train, val and detect) by Silvey Yu
 
 **Demo:** [On YouTube](https://www.youtube.com/watch?v=unRMQn6KwF0&ab_channel=SilveyYu) 
 
