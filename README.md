@@ -41,6 +41,12 @@ pip3 list
 
 ## Testing
 
+If "Descriptors cannot be created directly" error occurs, run:
+
+```
+pip install protobuf==3.20.1
+```
+
 **1. Test Train**
 
 To test the train, go into ``yolov5copy`` directory
